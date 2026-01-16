@@ -130,4 +130,82 @@
             <li>словари пользователя</li>
             <li>слова, фразы и переводы</li>
             <li>настройки приложения</li>
-            <li>тех
+            <li>технические данные (токены, IP, user-agent)</li>
+        </ul>
+
+        <h3>2. Использование данных</h3>
+        <p>Данные используются исключительно для работы приложения, синхронизации и восстановления данных.</p>
+
+        <h3>3. Защита данных</h3>
+        <p>Применяются разумные технические меры для защиты данных.</p>
+
+        <h3>4. Удаление данных</h3>
+        <p>Пользователь может удалить свои данные через настройки приложения или запросить удаление аккаунта.</p>
+
+        <h3>5. Контакты</h3>
+        <p>Email: <strong>mydictionaryk@gmail.com</strong></p>
+    </div>
+
+    <!-- EN -->
+    <div id="en" style="display:none;">
+        <h2>Privacy Policy</h2>
+        <p><strong>Last updated:</strong> 16.01.2026</p>
+
+        <p>The "My Dictionary" app respects user privacy and is committed to protecting personal data.</p>
+
+        <h3>1. What data is collected</h3>
+
+        <h4>1.1 Local data</h4>
+        <ul>
+            <li>dictionaries and word lists</li>
+            <li>word and phrase translations</li>
+            <li>flashcards</li>
+            <li>word usage statistics</li>
+        </ul>
+
+        <h4>1.2 Google Sign-In data</h4>
+        <ul>
+            <li>user name</li>
+            <li>email address</li>
+            <li>Google account ID</li>
+        </ul>
+
+        <h4>1.3 Sync data</h4>
+        <ul>
+            <li>user dictionaries</li>
+            <li>words, phrases and translations</li>
+            <li>app settings</li>
+            <li>technical data (tokens, IP, user-agent)</li>
+        </ul>
+
+        <h3>2. Data usage</h3>
+        <p>Data is used only for app functionality, synchronization and recovery.</p>
+
+        <h3>3. Data protection</h3>
+        <p>We apply reasonable technical measures to protect user data.</p>
+
+        <h3>4. Data deletion</h3>
+        <p>The user may delete their data via app settings or request account deletion.</p>
+
+        <h3>5. Contact</h3>
+        <p>Email: <strong>mydictionaryk@gmail.com</strong></p>
+    </div>
+
+    <footer>
+        © 2026 My Dictionary
+    </footer>
+
+</div>
+
+<script>
+    function setLang(lang) {
+        document.getElementById('ru').style.display = lang === 'ru' ? 'block' : 'none';
+        document.getElementById('en').style.display = lang === 'en' ? 'block' : 'none';
+
+        document.getElementById('ruBtn').classList.toggle('active', lang === 'ru');
+        document.getElementById('enBtn').classList.toggle('active', lang === 'en');
+    }
+</script>
+
+</body>
+</html>
