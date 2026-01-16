@@ -2,179 +2,228 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Политика конфиденциальности — My Dictionary</title>
+    <title>My Dictionary — Privacy Policy</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
         :root {
-            --primary: #6a1b9a;
-            --text: #2b2b2b;
-            --muted: #6b6b6b;
+            --primary: #6b0024;
             --bg: #f5f6fa;
             --card: #ffffff;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, Arial, sans-serif;
+            --text: #2c2c2c;
         }
 
         body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
             background: var(--bg);
             color: var(--text);
-            line-height: 1.6;
         }
 
         .container {
             max-width: 900px;
             margin: 40px auto;
-            padding: 24px;
+            padding: 20px;
         }
 
         .card {
             background: var(--card);
             border-radius: 16px;
             padding: 40px;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .logo img {
+            width: 64px;
+            height: 64px;
+            border-radius: 16px;
         }
 
         h1 {
-            font-size: 32px;
+            font-size: 28px;
+            margin: 0;
             color: var(--primary);
-            margin-bottom: 8px;
         }
 
-        .updated {
-            color: var(--muted);
-            margin-bottom: 32px;
+        .lang-switch {
+            display: flex;
+            gap: 10px;
+        }
+
+        .lang-switch button {
+            border: none;
+            background: #eee;
+            padding: 8px 16px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .lang-switch button.active {
+            background: var(--primary);
+            color: white;
         }
 
         h2 {
-            margin-top: 32px;
-            margin-bottom: 12px;
+            margin-top: 30px;
             color: var(--primary);
-            font-size: 22px;
-        }
-
-        h3 {
-            margin-top: 20px;
-            margin-bottom: 8px;
-            font-size: 18px;
-        }
-
-        p {
-            margin-bottom: 12px;
         }
 
         ul {
-            margin: 12px 0 12px 20px;
+            padding-left: 20px;
         }
 
-        li {
-            margin-bottom: 6px;
-        }
-
-        .footer {
+        footer {
             margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-            color: var(--muted);
+            text-align: center;
+            color: #777;
             font-size: 14px;
-        }
-
-        .email {
-            font-weight: 600;
-            color: var(--primary);
-        }
-
-        @media (max-width: 600px) {
-            .card {
-                padding: 24px;
-            }
-
-            h1 {
-                font-size: 26px;
-            }
         }
     </style>
 </head>
+
 <body>
 
 <div class="container">
     <div class="card">
 
-        <h1>Политика конфиденциальности приложения «My Dictionary»</h1>
-        <div class="updated">Дата последнего обновления: 16.01.2026</div>
+        <header>
+            <div class="logo">
+                <!-- ЛОГОТИП -->
+                <img src="icon-512.png" alt="My Dictionary Logo">
+                <h1>My Dictionary</h1>
+            </div>
 
-        <p>
-            Приложение «My Dictionary» уважает конфиденциальность пользователей и стремится обеспечивать защиту
-            персональных данных. Настоящая Политика конфиденциальности описывает, какие данные собираются,
-            как они используются и каким образом защищаются.
-        </p>
+            <!-- ПЕРЕКЛЮЧАТЕЛЬ ЯЗЫКА -->
+            <div class="lang-switch">
+                <button id="ruBtn" class="active" onclick="setLang('ru')">RU</button>
+                <button id="enBtn" onclick="setLang('en')">EN</button>
+            </div>
+        </header>
 
-        <h2>1. Какие данные собираются</h2>
+        <!-- RU -->
+        <div id="ru">
+            <h2>Политика конфиденциальности</h2>
+            <p><b>Дата последнего обновления:</b> 16.01.2026</p>
 
-        <h3>1.1 Локальные данные</h3>
-        <p>По умолчанию все данные пользователя хранятся локально на устройстве:</p>
-        <ul>
-            <li>словари и списки слов</li>
-            <li>переводы слов и фраз</li>
-            <li>карточки для повторения</li>
-            <li>частота использования слов</li>
-        </ul>
-        <p>Эти данные не передаются на сервер без авторизации пользователя.</p>
+            <p>
+                Приложение «My Dictionary» уважает конфиденциальность пользователей и стремится обеспечивать защиту персональных данных.
+            </p>
 
-        <h3>1.2 Данные при входе через Google</h3>
-        <p>При авторизации через Google может быть получена следующая информация:</p>
-        <ul>
-            <li>имя пользователя</li>
-            <li>адрес электронной почты</li>
-            <li>идентификатор Google-аккаунта</li>
-        </ul>
-        <p>Данные используются исключительно для идентификации пользователя и предоставления функций синхронизации.</p>
+            <h2>1. Какие данные собираются</h2>
 
-        <h3>1.3 Данные, передаваемые на сервер при синхронизации</h3>
-        <ul>
-            <li>словари пользователя</li>
-            <li>слова, фразы и переводы</li>
-            <li>настройки приложения</li>
-            <li>технические данные для авторизации (токены, устройство, IP-адрес, user-agent)</li>
-        </ul>
+            <h3>1.1 Локальные данные</h3>
+            <ul>
+                <li>словари и списки слов</li>
+                <li>переводы слов и фраз</li>
+                <li>карточки для повторения</li>
+                <li>частота использования слов</li>
+            </ul>
 
-        <h2>2. Как используются данные</h2>
-        <p>
-            Данные используются исключительно для работы функционала приложения, синхронизации
-            и восстановления данных пользователя.
-        </p>
-        <p>
-            Приложение не передаёт персональные данные третьим лицам и не использует их в рекламных целях.
-        </p>
+            <h3>1.2 Данные при входе через Google</h3>
+            <ul>
+                <li>имя пользователя</li>
+                <li>адрес электронной почты</li>
+                <li>идентификатор Google-аккаунта</li>
+            </ul>
 
-        <h2>3. Хранение и защита данных</h2>
-        <p>
-            Мы применяем разумные технические и организационные меры для защиты данных пользователя
-            от несанкционированного доступа, утраты или изменения.
-        </p>
+            <h3>1.3 Данные при синхронизации</h3>
+            <ul>
+                <li>словари пользователя</li>
+                <li>слова, фразы и переводы</li>
+                <li>настройки приложения</li>
+                <li>технические данные (IP, токены, user-agent)</li>
+            </ul>
 
-        <h2>4. Удаление данных</h2>
-        <p>
-            Пользователь может удалить свои данные через настройки приложения или запросить удаление аккаунта.
-        </p>
+            <h2>2. Использование данных</h2>
+            <p>Данные используются исключительно для работы приложения и синхронизации.</p>
 
-        <h2>5. Контакты</h2>
-        <p>
-            По вопросам, связанным с обработкой персональных данных:
-        </p>
-        <p class="email">Email: mydictionaryk@gmail.com</p>
+            <h2>3. Защита данных</h2>
+            <p>Мы применяем разумные технические меры для защиты данных пользователя.</p>
 
-        <div class="footer">
-            © 2026 My Dictionary
+            <h2>4. Удаление данных</h2>
+            <p>Пользователь может удалить свои данные через настройки приложения.</p>
+
+            <h2>5. Контакты</h2>
+            <p>Email: <b>mydictionaryk@gmail.com</b></p>
         </div>
+
+        <!-- EN -->
+        <div id="en" style="display:none">
+            <h2>Privacy Policy</h2>
+            <p><b>Last updated:</b> 16.01.2026</p>
+
+            <p>
+                My Dictionary respects user privacy and is committed to protecting personal data.
+            </p>
+
+            <h2>1. Data we collect</h2>
+
+            <h3>1.1 Local data</h3>
+            <ul>
+                <li>dictionaries and word lists</li>
+                <li>translations</li>
+                <li>flashcards</li>
+                <li>word usage statistics</li>
+            </ul>
+
+            <h3>1.2 Google Sign-In data</h3>
+            <ul>
+                <li>user name</li>
+                <li>email address</li>
+                <li>Google account ID</li>
+            </ul>
+
+            <h3>1.3 Sync data</h3>
+            <ul>
+                <li>user dictionaries</li>
+                <li>words and translations</li>
+                <li>app settings</li>
+                <li>technical auth data (IP, tokens, user-agent)</li>
+            </ul>
+
+            <h2>2. Data usage</h2>
+            <p>Data is used only for app functionality and synchronization.</p>
+
+            <h2>3. Data protection</h2>
+            <p>We apply reasonable technical measures to protect user data.</p>
+
+            <h2>4. Data removal</h2>
+            <p>User can delete data via app settings.</p>
+
+            <h2>5. Contact</h2>
+            <p>Email: <b>mydictionaryk@gmail.com</b></p>
+        </div>
+
+        <footer>
+            © 2026 My Dictionary
+        </footer>
 
     </div>
 </div>
+
+<script>
+    function setLang(lang) {
+        document.getElementById("ru").style.display = lang === "ru" ? "block" : "none";
+        document.getElementById("en").style.display = lang === "en" ? "block" : "none";
+
+        document.getElementById("ruBtn").classList.toggle("active", lang === "ru");
+        document.getElementById("enBtn").classList.toggle("active", lang === "en");
+    }
+</script>
 
 </body>
 </html>
