@@ -135,7 +135,7 @@
     </header>
     
     <div style="margin-bottom: 24px;">
-        <button class="back-btn" onclick="goBack()">Назад в приложение</button>
+        <button class="back-btn" id="backBtn" onclick="goBack()">Назад в приложение</button>
     </div>
     
     <!-- RU -->
@@ -241,17 +241,32 @@
 
         document.getElementById('ruBtn').classList.toggle('active', lang === 'ru');
         document.getElementById('enBtn').classList.toggle('active', lang === 'en');
+        
+        // меняем текст кнопки
+        document.getElementById('backBtn').innerText = texts[lang].back;
     }
 </script>
 <script>
-    function goBack() {
-        if (window.history.length > 1) {
-            window.history.back();
-        } else {
-            window.close();
-        }
+    // Если есть история — возвращаемся назад в браузере
+    if (window.history.length > 1) {
+        window.history.back();
+        return;
     }
-</script>
 
+    // Иначе пытаемся вернуться в приложение
+    window.location.href = "mydictionary://back";
+
+    // fallback — если приложение не установлено
+    setTimeout(() => {
+        window.close();
+    }, 500);
+}
+</script>
+<script>
+    const texts = {
+        ru: { back: "Назад в приложение" },
+        en: { back: "Back to app" }
+    };
+</script>
 </body>
 </html>
