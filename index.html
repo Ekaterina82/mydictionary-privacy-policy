@@ -244,6 +244,10 @@
         
         // меняем текст кнопки
         document.getElementById('backBtn').innerText = texts[lang].back;
+        
+        // обновляем URL без перезагрузки
+        const newUrl = window.location.pathname + "?lang=" + lang;
+        window.history.replaceState(null, "", newUrl);
     }
 </script>
 <script>
@@ -261,5 +265,6 @@ function goBack() {
         en: { back: "Back to app" }
     };
 </script>
+    
 </body>
 </html>
