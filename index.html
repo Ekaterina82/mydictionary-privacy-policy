@@ -247,13 +247,14 @@
     }
 </script>
 <script>
-    // Если есть история — возвращаемся назад в браузере
+function goBack() {
+    // Если есть история — возвращаемся назад
     if (window.history.length > 1) {
         window.history.back();
         return;
     }
 
-    // Иначе пытаемся вернуться в приложение
+    // Иначе возвращаемся в приложение по deep link
     window.location.href = "mydictionary://back";
 
     // fallback — если приложение не установлено
