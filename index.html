@@ -248,19 +248,11 @@
 </script>
 <script>
 function goBack() {
-    // Если есть история — возвращаемся назад
     if (window.history.length > 1) {
         window.history.back();
-        return;
+    } else {
+        window.location.href = "mydictionary://back";
     }
-
-    // Иначе возвращаемся в приложение по deep link
-    window.location.href = "mydictionary://back";
-
-    // fallback — если приложение не установлено
-    setTimeout(() => {
-        window.close();
-    }, 500);
 }
 </script>
 <script>
