@@ -265,6 +265,25 @@ function goBack() {
         en: { back: "Back to app" }
     };
 </script>
-    
+<script>
+    function getLangFromUrl() {
+        const params = new URLSearchParams(window.location.search);
+        const lang = params.get("lang");
+
+        // если язык передан из приложения — используем его
+        if (lang === "ru" || lang === "en") {
+            return lang;
+        }
+
+        // если открыли просто в браузере — по умолчанию EN
+        return "en";
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const lang = getLangFromUrl();
+        setLang(lang);
+    });
+</script>
+
 </body>
 </html>
